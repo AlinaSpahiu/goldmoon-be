@@ -16,7 +16,7 @@ dotenv.config()
 const server = express()
 server.use(express.json())
 
-server.use("/api/rooms", roomRoutes)
+server.use("https://goldenmoon-be.herokuapp.com//api/rooms", roomRoutes)
 server.use("/api/users", userRoutes)
 
 // Error mmiddleware
@@ -34,6 +34,7 @@ try{
   mongoose.connect(process.env.URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   },
   (err)=> console.log(err),
   () => console.log("Mongoose is connected"))
