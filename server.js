@@ -12,7 +12,7 @@ const userRoutes = require('./routes/userRoutes');
 
 dotenv.config()
 
-connectDB()
+//connectDB()
 const server = express()
 server.use(express.json())
 
@@ -25,13 +25,13 @@ server.use(notFound)
 server.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
-const uri  = process.env.URI
+const URL  = process.env.URL
 
 
 // mongoose
 try{
     console.log("about to connect")
-  mongoose.connect("mongodb+srv://alina:xFDK11yzK21eGmxc@cluster0.csboe.mongodb.net/goldenmoon?retryWrites=true&w=majority", {
+  mongoose.connect(process.env.URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
