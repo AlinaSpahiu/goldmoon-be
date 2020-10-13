@@ -16,7 +16,7 @@ dotenv.config()
 const server = express()
 server.use(express.json())
 
-server.use("https://goldenmoon-be.herokuapp.com/api/rooms", roomRoutes)
+server.use("/api/rooms", roomRoutes)
 server.use("/api/users", userRoutes)
 
 // Error mmiddleware
