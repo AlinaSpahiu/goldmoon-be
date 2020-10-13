@@ -38,6 +38,8 @@ try{
   (err)=> console.log(err),
   () => console.log("Mongoose is connected"))
 //   .then(
-//          server.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.italic))
+//          
 //   )
 }catch(e){console.log('Could not connect')}
+
+server.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.italic))
