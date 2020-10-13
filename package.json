@@ -1,12 +1,11 @@
 {
-  "name": "gm-be",
+  "name": "goldenmoon-be",
   "version": "1.0.0",
   "description": "the back end of gold moon-resort",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r ./server.js",
-    "client": "npm start --prefix gm-fe"
+    "dev": "nodemon -r ./server.js"
   },
   "author": "Alina Spahiu",
   "license": "ISC",
