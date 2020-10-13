@@ -25,14 +25,19 @@ server.use(notFound)
 server.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
+const uri  = process.env.URI
 
 
 // mongoose
-//   .connect("mongodb://localhost:27017/goldmoon", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
+try{
+    console.log("about to connect")
+  mongoose.connect("mongodb+srv://alina:xFDK11yzK21eGmxc@cluster0.csboe.mongodb.net/goldenmoon?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err)=> console.log(err),
+  () => console.log("Mongoose is connected"))
 //   .then(
-         server.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.italic))
+//          server.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.italic))
 //   )
-//   .catch((err) => console.log(err))
+}catch(e){console.log('Could not connect')}
