@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node goldenmoon-be/server",
     "dev": "nodemon -r ./server.js"
   },
   "author": "Alina Spahiu",
