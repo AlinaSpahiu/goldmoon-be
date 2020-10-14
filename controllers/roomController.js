@@ -75,3 +75,4 @@ const updateRoom = asyncHandler( async(req, res) => {
 
 
 module.exports = {getRooms, getRoomsById, deleteRoom, createRoom, updateRoom}
+
