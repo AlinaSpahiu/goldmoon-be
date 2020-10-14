@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const roomSchema = mongoose.Schema({
   //  user: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User'},
-    name: { type: String, required: true },
-    image: { type: String, required: true},
+    name: { type: String, required: false },
+    image: { type: String, required: false},
     slug: { type: String, required: false },
     type: { type: String, required: false },
     price: { type: Number, required: false },
@@ -12,7 +12,7 @@ const roomSchema = mongoose.Schema({
     breakfast: { type: Boolean, required: false },
     description: { type: String, required: false },
     roomOnStock: { type: Number, required: false },
-    includes:{type: Array, required: true},
+    includes:{type: Array, required: false},
     capacity: { type: Number, required: false }      
 }, {
     timestamps: true
