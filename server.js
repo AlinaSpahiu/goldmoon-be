@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv')
 const colors = require('colors')
+const cors = require("cors")
 const mongoose = require('mongoose')
 const connectDB = require('./config/db')
 const {notFound, errorHandler} = require('./middleware/errorMiddleware')
@@ -12,8 +13,9 @@ const userRoutes = require('./routes/userRoutes');
 
 dotenv.config()
 
-connectDB()
+// connectDB()
 const server = express()
+server.use(cors())
 server.use(express.json())
 
 server.use("/api/rooms", roomRoutes)
