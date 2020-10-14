@@ -12,7 +12,7 @@ const userRoutes = require('./routes/userRoutes');
 
 dotenv.config()
 
-//connectDB()
+connectDB()
 const server = express()
 server.use(express.json())
 
@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 5000
 const URL  = process.env.URL
 
 
-// mongoose
+//mongoose
 try{
     console.log("about to connect")
   mongoose.connect(process.env.URL, {
