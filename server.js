@@ -13,7 +13,7 @@ const userRoutes = require('./routes/userRoutes');
 
 dotenv.config()
 
-// connectDB()
+connectDB()
 const server = express()
 server.use(cors())
 server.use(express.json())
